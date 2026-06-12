@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { profile } from "@/data/profile";
 
 const links = [
   { href: "#about", label: "About" },
@@ -43,7 +44,7 @@ export default function Nav() {
           ))}
           <li>
             <a
-              href="/Omar-Alqaysi-CV.docx"
+              href={profile.cvFile}
               download
               className="border border-accent/40 text-accent px-4 py-2 hover:bg-accent hover:text-background transition-colors"
             >
@@ -77,7 +78,7 @@ export default function Nav() {
             </li>
           ))}
           <li>
-            <a href="/Omar-Alqaysi-CV.docx" download className="inline-block border border-accent/40 text-accent px-4 py-2">
+            <a href={profile.cvFile} download className="inline-block border border-accent/40 text-accent px-4 py-2">
               Download CV ↓
             </a>
           </li>

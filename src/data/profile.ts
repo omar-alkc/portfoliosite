@@ -21,9 +21,12 @@ export const profile = {
     github: "https://github.com/omar-alkc",
     linkedin: "https://linkedin.com/in/omar-alqaisi-2020/",
   },
-  cvFile: "/Omar-Alqaysi-CV.docx",
-  portrait: "/images/portrait.png",
-  portraitBw: "/images/portrait-about.png",
+  // Plain <a> hrefs don't get the Next.js basePath prefix automatically,
+  // so it's included here. Keep in sync with basePath in next.config.ts.
+  cvFile: "/portfoliosite/Omar-Alqaysi-CV.docx",
+  // basePath prefix included — unoptimized next/image doesn't add it.
+  portrait: "/portfoliosite/images/portrait.png",
+  portraitBw: "/portfoliosite/images/portrait-about.png",
   stats: [
     { value: "4+", label: "Years in data & BI" },
     { value: "10+", label: "Projects shipped" },
